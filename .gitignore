@@ -1,0 +1,48 @@
+ 
+# === Compilation ===
+*.class
+*.jar
+*.war
+*.ear
+
+# === Logs ===
+*.log
+logs/
+hs_err_pid*
+
+# === Fichiers de build ===
+/target/
+/build/
+/out/
+/bin/
+
+# === Dépendances (Maven et Gradle) ===
+/.mvn/
+/.gradle/
+/!gradle-wrapper.jar
+.gradle/
+/mvnw
+mvnw.cmd
+gradlew
+gradlew.bat
+
+# === Fichiers d'IDE ===
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.swp
+*.swo
+
+# === Configuration spécifique ===
+*.env
+*.properties
+config/*.yml
+config/*.json
+!config/application.yml  # Garde ce fichier si nécessaire
+!config/application.properties  # Garde ce fichier si nécessaire
+
+# === OS-Specific ===
+.DS_Store  # macOS
+Thumbs.db  # Windows
