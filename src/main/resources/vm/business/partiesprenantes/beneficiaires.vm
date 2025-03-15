@@ -1,0 +1,38 @@
+<div class="section">
+	<div class="section-header" onclick="toggleSection(51)">
+		<h2>$i18n.getText("cokpit.frc.jira.kycfile.beneficiaires")</h2>
+		<span></span>
+	</div>
+	<div class="section-content" id="section51" style="display: block;">
+		<table class="vertical-table">
+			<thead>
+				<tr>
+					<th class="fixed-column">$i18n.getText("cokpit.frc.jira.kycfile.proprietes")</th>
+					#foreach($beneficiairy in $beneficiaries)
+					<th>$i18n.getText("cokpit.frc.jira.kycfile.partiesprenantes.beneficiaire")$velocityCount</th>
+					#end
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="fixed-column">$i18n.getText("cokpit.frc.jira.kycfile.partiesprenantes.beneficiaire.identifiantTiers")</td>
+					#foreach($beneficiairy in $beneficiaries)
+					<td>$!beneficiairy.code</td>
+					#end
+				</tr>
+				<tr>
+					<td class="fixed-column">$i18n.getText("cokpit.frc.jira.kycfile.partiesprenantes.nomTiers")</td>
+					#foreach($beneficiairy in $beneficiaries)
+					<td>$!beneficiairy.nomTiers</td>
+					#end
+				</tr>
+				<tr>
+					<td class="fixed-column">$i18n.getText("cokpit.frc.jira.kycfile.partiesprenantes.prenomTiers")</td>
+					#foreach($beneficiairy in $beneficiaries)
+					<td>$!beneficiairy.prenomTiers</td>
+					#end
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

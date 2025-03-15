@@ -1,0 +1,7 @@
+#if($kycFile.libelleTypeClient.equalsIgnoreCase("PM"))
+<div class="tabs-pane" id="partiesprenantes">
+	#parse("/vm/business/partiesprenantes/beneficiaires.vm")
+	#parse("/vm/business/partiesprenantes/dirigeants.vm")
+	#parse("/vm/business/partiesprenantes/actionnaires.vm")
+</div>
+#end

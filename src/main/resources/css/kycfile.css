@@ -1,0 +1,86 @@
+aui-inline-dialog.aui-layer[open]{
+	max-width: 1050px;
+	max-height: 650px;
+}
+aui-inline-dialog .aui-inline-dialog-contents {
+	background-color: #f4f5f7;
+}
+
+.white-color{
+	color:#ffffff;
+}
+
+.aui-page-header{
+	background-color: #670101;
+	color: #000000;
+	padding-left: 4%;
+}
+
+.aui-page-header-actions {
+    padding-left: 20px;
+    text-align: left!important;
+}
+
+.property-list1{
+	width: 200px;
+}
+
+.breadcrumb, .title{
+	color: #ffffff!important;
+}
+
+.section{
+	padding: 10px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	background-color: #f7f7fa;
+}
+
+.section-header{
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
+}
+
+.section-header h2{
+	margin: 0;
+	padding: 0;
+	color: #670101;
+}
+
+.section-content, .notdisplay{
+	display: none;
+}
+
+
+.vertical-table{
+	border-collapse: collapse;
+	width: 100%;
+	text-align: left;
+	background-color:#f7f7fa;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+.vertical-table th, .vertical-table td{
+	padding: 10px;
+	border-bottom: 1px solid #ddd;
+}
+.vertical-table th{
+	background-color: #ffffff;
+}
+.vertical-table .fixed-column{
+	position: sticky;
+	left: 0;
+	z-index: 1;
+	background-color: #ffffff;
+}
+.vertical-table .fixed-column{
+	width: 250px;
+	background-color: f7f7fa;
+}
+.vertical-table tbody tr:hover{
+	background-color: #f5f5f5;
+}
+.vertical-table tbody tr:nth-child(even){
+	background-color: #fcfcfc;
+}

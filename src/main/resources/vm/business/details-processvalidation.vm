@@ -1,0 +1,230 @@
+<aui-inline-dialog alignment="top right" id=$jissue.issueid>
+	<h2>Détails du processus de validation</h2>
+	<ul class="property-list">	
+		#if($jissue.commentaireCC)	
+		<li id="commentaireCC" class="item">
+			<div class="wrap">
+				<strong class="name"><label for="commentaireCC-val">Commentaire CC</label></strong>
+				<div id="commentaireCC-val" class="value">$!jissue.commentaireCC</div>
+			</div>
+		</li>
+		#end
+		
+		#if($jissue.commentaireRA)
+		<li id="commentaireRA" class="item">
+			<div class="wrap">
+				<strong class="name"><label for="commentaireRA-val">Commentaire RA/RM</label></strong>
+				<div id="commentaireRA-val" class="value">$!jissue.commentaireRA</div>
+			</div>
+		</li>
+		#end
+	</ul>
+	
+	#if($jissue.validationRCO)
+	<div class="aui-page-notification-details-header-expander">
+        <span class="aui-expander-trigger">RCO</span>
+    </div>
+	<ul class="property-list">
+		<li id="dc" class="item">
+			<div class="aui-group">
+				<div class="aui-item wrap">
+					<strong class="name"><label for="validationRCO-val">Validation RCO</label></strong>
+					<div id="validationRCO-val" class="value">$!jissue.validationRCO</div>
+				</div>
+				<div class="aui-item wrap">
+					<strong class="name"><label for="rco-val">RCO</label></strong>
+					<div id="rco-val" class="value">$!jissue.rco</div>
+				</div>
+			</div>
+		</li>
+		<li id="commentaireRCO" class="item">
+			<div class="wrap">
+				<strong class="name"><label for="commentaireRCO-val">Commentaire RCO</label></strong>
+				<div id="commentaireRCO-val" class="value">$!jissue.commentaireRCO</div>
+			</div>
+		</li>
+	</ul>
+	#end
+
+	#if($jissue.validationAMLO)
+	<div class="aui-page-notification-details-header-expander">
+        <span class="aui-expander-trigger">AMLO</span>
+    </div>
+	<ul class="property-list">
+		<li id="dc" class="item">
+			<div class="aui-group">
+				<div class="aui-item wrap">
+					<strong class="name"><label for="validationAMLO-val">Validation AMLO</label></strong>
+					<div id="validationAMLO-val" class="value">$!jissue.validationAMLO</div>
+				</div>
+				<div class="aui-item wrap">
+					<strong class="name"><label for="amlo-val">AMLO</label></strong>
+					<div id="amlo-val" class="value">$!jissue.amlo</div>
+				</div>
+			</div>
+		</li>
+		<li id="commentaireAMLO" class="item">
+			<div class="wrap">
+				<strong class="name"><label for="commentaireAMLO-val">Commentaire AMLO</label></strong>
+				<div id="commentaireAMLO-val" class="value">$!jissue.commentaireAMLO</div>
+			</div>
+		</li>
+	</ul>
+	#end
+	
+	#if($jissue.validationDC)
+	<div class="aui-page-notification-details-header-expander">
+        <span class="aui-expander-trigger">Direction Commerciale (DC)</span>
+    </div>
+	<ul class="property-list">
+		<li id="dc" class="item">
+			<div class="aui-group">
+				<div class="aui-item wrap">
+					<strong class="name"><label for="validationDC-val">Validation DC</label></strong>
+					<div id="validationDC-val" class="value">$!jissue.validationDC</div>
+				</div>
+				<div class="aui-item wrap">
+					<strong class="name"><label for="dc-val">Direction commerciale</label></strong>
+					<div id="dc-val" class="value">$!jissue.dc</div>
+				</div>
+			</div>
+		</li>
+		<li id="commentaireDC" class="item">
+			<div class="wrap">
+				<strong class="name"><label for="commentaireDC-val">Commentaire DC</label></strong>
+				<div id="commentaireDC-val" class="value">$!jissue.commentaireDC</div>
+			</div>
+		</li>
+	</ul>	
+	#end
+	
+	#if($jissue.validationMO)
+	<div class="aui-page-notification-details-header-expander">
+        <span class="aui-expander-trigger">Middle Office (MO)</span>
+    </div>
+	<ul class="property-list">	
+		<li id="mo" class="item">
+			<div class="aui-group">
+				<div class="aui-item wrap">
+					<strong class="name"><label for="validationMO-val">Validation MO</label></strong>
+					<div id="validationMO-val" class="value">$!jissue.validationMO</div>
+				</div>
+				<div class="aui-item wrap">
+					<strong class="name"><label for="mo-val">Middle Office</label></strong>
+					<div id="mo-val" class="value">$!jissue.mo</div>
+				</div>
+			</div>
+		</li>		
+		<li id="commentaireMO" class="item">
+			<div class="wrap">
+				<strong class="name"><label for="commentaireMO-val">Commentaire MO</label></strong>
+				<div id="commentaireMO-val" class="value">$!jissue.commentaireMO</div>
+			</div>
+		</li>
+	</ul>	
+	#end
+	
+	#if($jissue.validationCABCO)
+	<div class="aui-page-notification-details-header-expander">
+        <span class="aui-expander-trigger">CABCO</span>
+    </div>
+	<ul class="property-list">	
+		<li id="cabco" class="item">
+			<div class="aui-group">
+				<div class="aui-item wrap">
+					<strong class="name"><label for="validationCABCO-val">Validation CABCO</label></strong>
+					<div id="validationCABCO-val" class="value">$!jissue.validationCABCO</div>
+				</div>
+				<div class="aui-item wrap">
+					<strong class="name"><label for="cabco-val">CABCO</label></strong>
+					<div id="cabco-val" class="value">$!jissue.cabco</div>
+				</div>
+			</div>
+		</li>
+		<li id="commentaireCABCO" class="item">
+			<div class="wrap">
+				<strong class="name"><label for="commentaireCABCO-val">Commentaire CABCO</label></strong>
+				<div id="commentaireCABCO-val" class="value">$!jissue.commentaireCABCO</div>
+			</div>
+		</li>
+	</ul>	
+	#end
+	
+	#if($jissue.validationDG)
+	<div class="aui-page-notification-details-header-expander">
+        <span class="aui-expander-trigger">Direction Générale (DG)</span>
+    </div>
+	<ul class="property-list">
+		<li id="dg" class="item">
+			<div class="aui-group">
+				<div class="aui-item wrap">
+					<strong class="name"><label for="validationDG-val">Validation DG</label></strong>
+					<div id="validationDG-val" class="value">$!jissue.validationDG</div>
+				</div>
+				<div class="aui-item wrap">
+					<strong class="name"><label for="dg-val">Direction générale</label></strong>
+					<div id="dg-val" class="value">$!jissue.dg</div>
+				</div>
+			</div>
+		</li>
+		<li id="commentaireDG" class="item">
+			<div class="wrap">
+				<strong class="name"><label for="commentaireDG-val">Commentaire DG</label></strong>
+				<div id="commentaireDG-val" class="value">$!jissue.commentaireDG</div>
+			</div>
+		</li>
+	</ul>		
+	#end
+	
+	#if($jissue.validationCTR)
+	<div class="aui-page-notification-details-header-expander">
+        <span class="aui-expander-trigger">Contrôle 2nd niveau (CTR)</span>
+    </div>
+	<ul class="property-list">		
+		<li id="ctr" class="item">
+			<div class="aui-group">
+				<div class="aui-item wrap">
+					<strong class="name"><label for="validationCTR-val">Validation CTR</label></strong>
+					<div id="validationCTR-val" class="value">$!jissue.validationCTR</div>
+				</div>
+				<div class="aui-item wrap">
+					<strong class="name"><label for="ctr-val">Contrôle 2nd niveau</label></strong>
+					<div id="ctr-val" class="value">$!jissue.ctr</div>
+				</div>
+			</div>
+		</li>		
+		<li id="commentaireCTR" class="item">
+			<div class="wrap">
+				<strong class="name"><label for="commentaireCTR-val">Commentaire CTR</label></strong>
+				<div id="commentaireCTR-val" class="value">$!jissue.commentaireCTR</div>
+			</div>
+		</li>
+	</ul>
+	#end
+	
+	#if($jissue.validationBO)
+	<div class="aui-page-notification-details-header-expander">
+        <span class="aui-expander-trigger">Back Office (BO)</span>
+    </div>
+	<ul class="property-list">
+		<li id="bo" class="item">
+			<div class="aui-group">
+				<div class="aui-item wrap">
+					<strong class="name"><label for="validationBO-val">Validation BO</label></strong>
+					<div id="validationBO-val" class="value">$!jissue.validationBO</div>
+				</div>
+				<div class="aui-item wrap">
+					<strong class="name"><label for="bo-val">Back Office</label></strong>
+					<div id="bo-val" class="value">$!jissue.bo</div>
+				</div>
+			</div>
+		</li>		
+		<li id="commentaireBO" class="item">
+			<div class="wrap">
+				<strong class="name"><label for="commentaireBO-val">Commentaire BO</label></strong>
+				<div id="commentaireBO-val" class="value">$!jissue.commentaireBO</div>
+			</div>
+		</li>
+	</ul>
+	#end
+</aui-inline-dialog>

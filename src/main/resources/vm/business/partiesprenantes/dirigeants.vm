@@ -1,0 +1,56 @@
+<div class="section">	
+	<div class="section-header" onclick="toggleSection(52)">
+		<h2>$i18n.getText("cokpit.frc.jira.kycfile.dirigeants")</h2>
+		<span></span>
+	</div>
+	<div class="section-content" id="section52">
+		<table class="vertical-table">
+			<thead>
+				<tr>
+					<th class="fixed-column">$i18n.getText("cokpit.frc.jira.kycfile.proprietes")</th>
+					#foreach($leader in $leaders)
+					<th>$i18n.getText("cokpit.frc.jira.kycfile.partiesprenantes.dirigeant")$velocityCount</th>
+					#end
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="fixed-column">$i18n.getText("cokpit.frc.jira.kycfile.partiesprenantes.dirigeant.identifiantTiers")</td>
+					#foreach($leader in $leaders)
+					<td>$!leader.code</td>
+					#end
+				</tr>
+				<tr>
+					<td class="fixed-column">$i18n.getText("cokpit.frc.jira.kycfile.partiesprenantes.nomTiers")</td>
+					#foreach($leader in $leaders)
+					<td>$!leader.nomTiers</td>
+					#end
+				</tr>
+				<tr>
+					<td class="fixed-column">$i18n.getText("cokpit.frc.jira.kycfile.partiesprenantes.prenomTiers")</td>
+					#foreach($leader in $leaders)
+					<td>$!leader.prenomTiers</td>
+					#end
+				</tr>			
+				<tr>
+					<td class="fixed-column">$i18n.getText("cokpit.frc.jira.kycfile.partiesprenantes.resultatControleEmbargo")</td>
+					#foreach($leader in $leaders)
+					<td>$!leader.resultatControlEmbargoSanctions</td>
+					#end
+				</tr>
+				<tr>
+					<td class="fixed-column">$i18n.getText("cokpit.frc.jira.kycfile.partiesprenantes.realisationControlePPEOCR")</td>
+					#foreach($leader in $leaders)
+					<td>$!leader.resiliationControlePPEOCR</td>
+					#end
+				</tr>
+				<tr>
+					<td class="fixed-column">$i18n.getText("cokpit.frc.jira.kycfile.partiesprenantes.indicateurPPE")</td>
+					#foreach($leader in $leaders)
+					<td>$!leader.indicateurPPE</td>
+					#end
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

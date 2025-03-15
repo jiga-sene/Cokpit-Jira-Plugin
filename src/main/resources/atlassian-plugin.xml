@@ -3,22 +3,57 @@
         <description>${project.description}</description>
         <version>${project.version}</version>
         <vendor name="${project.organization.name}" url="${project.organization.url}" />
-        <param name="plugin-icon">images/pluginIcon.png</param>
-        <param name="plugin-logo">images/pluginLogo.png</param>
+	    <param name="plugin-icon">images/pluginIcon.png</param>  
+	    <param name="plugin-logo">images/pluginLogo.png</param>  
+	    <param name="configure.url">/plugins/servlet/cokpitv4/homepage</param> 
     </plugin-info>
 
-    <!-- add our i18n resource -->
+    <!-- i18n resource -->
     <resource type="i18n" name="i18n" location="Cokpitv4"/>
     
-    <!-- add our web resources -->
-    <web-resource key="Cokpitv4-resources" name="Cokpitv4 Web Resources">
-        <dependency>com.atlassian.auiplugin:ajs</dependency>
-        
+    <!-- web resources -->
+    <web-resource key="cokpitv4-resources" name="Cokpitv4 Web Resources">
+        <dependency>com.atlassian.auiplugin:ajs</dependency> 
         <resource type="download" name="Cokpitv4.css" location="/css/Cokpitv4.css"/>
+        <resource type="download" name="Datatables.min.css" location="/css/datatables.min.css"/>
         <resource type="download" name="Cokpitv4.js" location="/js/Cokpitv4.js"/>
+        <resource type="download" name="Customer_data.js" location="/js/Customer_data.js"/>
+        <resource type="download" name="Datatables.js" location="/js/datatables.min.js"/>
         <resource type="download" name="images/" location="/images"/>
-
+        <transformation extension="js"> <transformer key="jsI18n"/> </transformation>
         <context>Cokpitv4</context>
     </web-resource>
+    <web-resource key="cokpit4-kycfile-resources" name="Kyc File Web Resources">
+        <dependency>com.atlassian.auiplugin:ajs</dependency> 
+    	<resource type="download" name="Cokpitv4.css" location="/css/Cokpitv4.css"/>
+    	<resource type="download" name="kycfile.css" location="/css/kycfile.css"/>
+    	<resource type="download" name="kycfile.js" location="/js/kycfile.js"/>
+    	<resource type="download" name="images/" location="/images"/>
+    	<transformation extension="js"><transformer key="jsI18n"/></transformation>
+        <context>Cokpitv4</context>
+    </web-resource>
+    <web-resource key="cokpitv4-sousetapefield-resources" name="Sous Etape Field Web Resources">
+    	<dependency>com.atlassian.auiplugin:ajs</dependency>
+    	<resource type="download" name="sousEtapeCokpitPosition.js" location="/js/sousEtapeCokpitPosition.js"/>
+    	<context>jira.view.issue</context>
+    </web-resource>
     
+   	<web-item name="Cokpit FRC" i18n-name-key="cokpit-frc-jira.name" key="cokpitv4-referential-key" section="system.top.navigation.bar" weight="55">
+   		<label key="cokpit.frc.jira.label"/>
+    	<link linkId="cokpit_referential_key">/plugins/servlet/cokpitv4/homepage</link>
+    	<condition class="com.tc.labt.sgabs.cokpit.permissions.UserCokpitCondition"></condition>
+   	</web-item>
+  
+   	<!-- REST API -->  
+  	<rest name="Cokpit Rest API" key="cokpitv4-rest-api" version="1.0" path="/cokpitv4">
+    	<description>Provides REST resources for the Cokpitv4</description> 
+  	</rest>
+  
+   	<!-- SERVLET -->  
+  	<servlet key="cokpitv4-homepage-servlet" class="com.tc.labt.sgabs.cokpit.core.servlet.HomePageServlet"> 
+    	<url-pattern>/cokpitv4/homepage</url-pattern> 
+  	</servlet>
+  	<servlet key="cokpitv4-kyc-servlet" class="com.tc.labt.sgabs.cokpit.core.servlet.KYCFileServlet">
+  		<url-pattern>/cokpitv4/kyc</url-pattern>
+  	</servlet>  
 </atlassian-plugin>

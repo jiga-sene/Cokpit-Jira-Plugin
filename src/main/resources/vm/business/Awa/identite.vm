@@ -1,0 +1,164 @@
+<div class="tabs-pane active-pane" id="identite">
+
+	<ul class="property-list">
+		<li id="IDClient" class="item">
+				<div class="wrap">
+					<strong class="name"><label for="IDClient-val">$i18n.getText("cokpit.frc.jira.kycfile.identifiantClient")</label></strong>
+					<div id="IDClient-val" class="value">$!kycFile.codeClient</div>
+				</div>
+		</li>
+		<li id="typeClient" class="item">
+			<div class="aui-group">
+				<div class="aui-item wrap">
+					<strong class="name"><label for="libelleTypeClient-val">$i18n.getText("cokpit.frc.jira.kycfile.identite.libelleTypeClient")</label></strong>
+					<div id="libelleTypeClient" class="value">$!kycFile.libelleTypeClient</div>
+				</div>
+				<div class="aui-item wrap">
+					<strong class="name"><label for="referenceTypeClient-val">$i18n.getText("cokpit.frc.jira.kycfile.identite.referenceTypeClient")</label></strong>
+					<div id="referenceTypeClient-val" class="value">$!kycFile.referenceTypeClient</div>
+				</div>
+			</div>
+		</li>
+		
+		#if($kycFile.libelleTypeClient.equalsIgnoreCase("PP"))
+		<li id="nomPrenom" class="item">
+			<div class="aui-group">
+				<div class="aui-item wrap">
+					<strong class="name"><label for="nomClient-val">$i18n.getText("cokpit.frc.jira.kycfile.identite.nomClient")</label></strong>
+					<div id="nomClient-val" class="value">$!kycFile.nomClient</div>
+				</div>
+				<div class="aui-item wrap">
+					<strong class="name"><label for="prenomClient-val">$i18n.getText("cokpit.frc.jira.kycfile.identite.prenomClient")</label></strong>
+					<div id="prenomClient-val" class="value">$!kycFile.prenomClient</div>
+				</div>
+			</div>
+		</li>	
+		<li id="dateVilleNaissance" class="item">
+			<div class="aui-group">
+				<div class="aui-item wrap">
+					<strong class="name"><label for="dateNaissance-val">$i18n.getText("cokpit.frc.jira.kycfile.identite.dateNaissance")</label></strong>
+					<div id="dateNaissance-val" class="value">$!kycFile.dateNaissance</div>
+				</div>
+				<div class="aui-item wrap">
+					<strong class="name"><label for="villeNaissance-val">$i18n.getText("cokpit.frc.jira.kycfile.identite.villeNaissance")</label></strong>
+					<div id="villeNaissance-val" class="value">$!kycFile.villeNaissance</div>
+				</div>
+			</div>
+		</li>
+		<li id="paysNationalite" class="item">
+			<div class="aui-group">
+				<div class="aui-item wrap">
+					<strong class="name"><label for="paysNaissance-val">$i18n.getText("cokpit.frc.jira.kycfile.identite.paysNaissance")</label></strong>
+					<div id="paysNaissance-val" class="value">$!kycFile.paysNaissance</div>
+				</div>
+				<div class="aui-item wrap">
+					<strong class="name"><label for="nationalite-val">$i18n.getText("cokpit.frc.jira.kycfile.identite.nationalite")</label></strong>
+					<div id="nationalite-val" class="value">$!kycFile.nationalite</div>
+				</div>
+			</div>
+		</li>
+		<li id="profession" class="item">
+			<div class="wrap">
+				<strong class="name"><label for="profession-val">$i18n.getText("cokpit.frc.jira.kycfile.activites.profession")</label></strong>
+				<div id="profession-val" class="value">$!kycFile.profession</div>
+			</div>
+		</li>
+		<li id="typePieceID" class="item">
+			<div class="aui-group">
+				<div class="aui-item wrap">
+					<strong class="name"><label for="numPieceIdentite-val">$i18n.getText("cokpit.frc.jira.kycfile.identite.numPieceIdentite")</label></strong>
+					<div id="numPieceIdentite-val" class="value">$!kycFile.pieceIdentite</div>
+				</div>
+				<div class="aui-item wrap">
+					<strong class="name"><label for="libelleTypePiece-val">$i18n.getText("cokpit.frc.jira.kycfile.identite.libelleTypePiece")</label></strong>
+					<div id="libelleTypePiece-val" class="value">$!kycFile.libellePieceIdentite</div>
+				</div>
+			</div>
+		</li>
+		#end
+		
+		#if($kycFile.libelleTypeClient.equalsIgnoreCase("PM"))
+		<li id="raisonSociale_REG" class="item">
+			<div class="aui-group">
+				<div class="aui-item wrap">
+					<strong class="name"><label for="raisonSociale-val">$i18n.getText("cokpit.frc.jira.kycfile.identite.raisonSociale")</label></strong>
+					<div id="raisonSociale-val" class="value">$!kycFile.raisonSociale</div>
+				</div>
+				<div class="aui-item wrap">
+					<strong class="name"><label for="lieuDelivranceRegistreCom-val">$i18n.getText("cokpit.frc.jira.kycfile.identite.lieuDelivranceRegistreCom")</label></strong>
+					<div id="lieuDelivranceRegistreCom-val" class="value">$!kycFile.lieuDelivranceRegistreCommerce</div>
+				</div>
+			</div>
+		</li>
+		<li id="formeJuridique" class="item">
+			<div class="aui-group">
+				<div class="aui-item wrap">
+					<strong class="name"><label for="referenceFormeJuridique-val">$i18n.getText("cokpit.frc.jira.kycfile.identite.referenceFormeJuridique")</label></strong>
+					<div id="referenceFormeJuridique-val" class="value">$!kycFile.referenceFormeJuridique</div>
+				</div>
+				<div class="aui-item wrap">
+					<strong class="name"><label for="libelleFormeJuridique-val">$i18n.getText("cokpit.frc.jira.kycfile.identite.libelleFormeJuridique")</label></strong>
+					<div id="libelleFormeJuridique-val" class="value">$!kycFile.libelleFormeJuridique</div>
+				</div>
+			</div>
+		</li>
+		<li id="numeroEnregistrementEtDate" class="item">
+			<div class="aui-group">
+				<div class="aui-item wrap">
+					<strong class="name"><label for="numeroEnregistrement-val">$i18n.getText("cokpit.frc.jira.kycfile.identite.numeroEnregistrement")</label></strong>
+					<div id="numeroEnregistrement-val" class="value">$!kycFile.numeroEnregistrement</div>
+				</div>
+				<div class="aui-item wrap">
+					<strong class="name"><label for="dateCreation-val">$i18n.getText("cokpit.frc.jira.kycfile.identite.dateCreation")</label></strong>
+					<div id="dateCreation-val" class="value">$!kycFile.dateDeCreation</div>
+				</div>
+			</div>
+		</li>
+		#end
+		
+
+		<li id="paysResidence" class="item">
+				<div class="wrap">
+					<strong class="name"><label for="paysResidence-val">$i18n.getText("cokpit.frc.jira.kycfile.identite.paysResidence")</label></strong>
+					<div id="paysResidence-val" class="value">$!kycFile.paysResidence</div>
+				</div>
+		</li>		
+	</ul>
+			
+	#if($kycFile.libelleTypeClient.equalsIgnoreCase("PP"))
+	<div class="section">	
+		<div class="section-header" onclick="toggleSection(2)">
+			<h2>$i18n.getText("cokpit.frc.jira.kycfile.section.coordonnees")</h2>
+			<span></span>
+		</div>
+		<div class="section-content" id="section2" style="display: block;">
+			<ul class="property-list">
+				<li id="adresseDomicile" class="item">
+					<div class="wrap">
+						<strong class="name"><label for="adresseDomicile-val">$i18n.getText("cokpit.frc.jira.kycfile.coordonnees.adresseDomicile")</label></strong>
+						<div id="adresseDomicile-val" class="value">$!kycFile.adresseDomicile</div>
+					</div>
+				</li>
+				<li id="typePhonePrincipal" class="item">
+					<div class="aui-group">
+						<div class="aui-item wrap">
+							<strong class="name"><label for="typePhonePrincipal-val">$i18n.getText("cokpit.frc.jira.kycfile.coordonnees.typePhonePrincipal")</label></strong>
+							<div id="typePhonePrincipal-val" class="value">$!kycFile.typePhonePrincipal</div>
+						</div>
+						<div class="aui-item wrap">
+							<strong class="name"><label for="phonePrincipal-val">$i18n.getText("cokpit.frc.jira.kycfile.coordonnees.phonePrincipal")</label></strong>
+							<div id="phonePrincipale-val" class="value">$!kycFile.phonePrincipale</div>
+						</div>
+					</div>
+				</li>
+				<li id="adresseEmail" class="item">
+					<div class="wrap">
+						<strong class="name"><label for="adresseEmail-val">$i18n.getText("cokpit.frc.jira.kycfile.coordonnees.adresseEmail")</label></strong>
+						<div id="adresseEmail-val" class="value">$!kycFile.adresseEmail</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	#end
+</div>

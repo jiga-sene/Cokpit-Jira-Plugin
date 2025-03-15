@@ -1,0 +1,79 @@
+<div class="tabs-pane" id="ppe">
+	<ul class="property-list">
+		<li id="idclient" class="item">
+			<div class="wrap">
+				<strong class="name"><label for="idclient-val">$i18n.getText("cokpit.frc.jira.kycfile.identifiantClient")</label></strong>
+				<div id="idclient-val" class="value">$!kycFile.pep.codeClient</div>
+			</div>
+		</li>
+		<li id="codetiersppe" class="item">
+			<div class="wrap">
+				<strong class="name"><label for="codetiersppe-val">$i18n.getText("cokpit.frc.jira.kycfile.ppe.codetiers")</label></strong>
+				<div id="codetiersppe-val" class="value">$!kycFile.pep.identifiantTiers</div>
+			</div>
+		</li>
+		<li id="fonctionppe" class="item">
+			<div class="aui-group">
+				<div class="aui-item wrap">
+					<strong class="name"><label for="fonctionppe-val">$i18n.getText("cokpit.frc.jira.kycfile.ppe.fonction")</label></strong>
+					<div id="fonctionppe-val" class="value">$!kycFile.pep.referenceFonction</div>
+				</div>
+				<div class="aui-item wrap">
+					<strong class="name"><label for="fonctionLabelppe-val">$i18n.getText("cokpit.frc.jira.kycfile.ppe.fonctionLabel")</label></strong>
+					<div id="fonctionLabelppe-val" class="value">$!kycFile.pep.libelleFonction</div>
+				</div>
+			</div>
+		</li>
+		<li id="dateFinStatutppe" class="item">
+			<div class="wrap">
+				<strong class="name"><label for="dateFinStatutppe-val">$i18n.getText("cokpit.frc.jira.kycfile.ppe.dateFinStatut")</label></strong>
+				<div id="dateFinStatutppe-val" class="value">$!kycFile.pep.dateFinStatut</div>
+			</div>
+		</li>
+		
+		#if($kycFile.libelleTypeClient.equalsIgnoreCase("PP"))
+		<li id="typeLienppe" class="item">
+			<div class="aui-group">
+				<div class="aui-item wrap">
+					<strong class="name"><label for="typeLienppe-val">$i18n.getText("cokpit.frc.jira.kycfile.ppe.typeLien")</label></strong>
+					<div id="typeLienppe-val" class="value">$!kycFile.pep.referenceTypeLien</div>
+				</div>
+				<div class="aui-item wrap">
+					<strong class="name"><label for="typeLienLabelppe-val">$i18n.getText("cokpit.frc.jira.kycfile.ppe.typeLienLabel")</label></strong>
+					<div id="typeLienLabelppe-val" class="value">$!kycFile.pep.libelleTypeLien</div>
+				</div>
+			</div>
+		</li>
+		<li id="nomsppe" class="item">
+			<div class="aui-group">
+				<div class="aui-item wrap">
+					<strong class="name"><label for="nomPPE-val">$i18n.getText("cokpit.frc.jira.kycfile.ppe.nom")</label></strong>
+					<div id="nomPPE-val" class="value">$!kycFile.pep.nom</div>
+				</div>
+				<div class="aui-item wrap">
+					<strong class="name"><label for="prenomPPE-val">$i18n.getText("cokpit.frc.jira.kycfile.ppe.prenom")</label></strong>
+					<div id="prenomPPE-val" class="value">$!kycFile.pep.prenom</div>
+				</div>
+			</div>
+		</li>
+		<li id="naissance" class="item">
+			<div class="aui-group">
+				<div class="aui-item wrap">
+					<strong class="name"><label for="dateNaissancePPE-val">$i18n.getText("cokpit.frc.jira.kycfile.ppe.dateNaissance")</label></strong>
+					<div id="dateNaissancePPE-val" class="value">$!kycFile.pep.dateNaissance</div>
+				</div>
+				<div class="aui-item wrap">
+					<strong class="name"><label for="lieuNaissancePPE-val">$i18n.getText("cokpit.frc.jira.kycfile.ppe.lieuNaissance")</label></strong>
+					<div id="lieuNaissancePPE-val" class="value">$!kycFile.pep.lieuNaissance</div>
+				</div>
+			</div>
+		</li>
+		#end
+		<li id="categorieppe" class="item">
+			<div class="wrap">
+				<strong class="name"><label for="categorieppe-val">$i18n.getText("cokpit.frc.jira.kycfile.ppe.categorie")</label></strong>
+				<div id="categorieppe-val" class="value">$!kycFile.pep.categorie</div>
+			</div>
+		</li>
+	</ul>
+</div>

@@ -1,0 +1,39 @@
+<div class="tabs-pane" id="comptes">
+	<table class="vertical-table">
+		<thead>
+			<tr>
+				<th class="fixed-column">$i18n.getText("cokpit.frc.jira.kycfile.proprietes")</th>
+				#foreach($account in $accounts)
+				<th>Compte$velocityCount</th>
+				#end
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="fixed-column">$i18n.getText("cokpit.frc.jira.kycfile.compte.typeCompte")</td>
+				#foreach($account in $accounts)
+				<td>$!account.typeCompte</td>
+				#end
+			<tr>
+				<td class="fixed-column">$i18n.getText("cokpit.frc.jira.kycfile.compte.typeCompteLibelle")</td>
+				#foreach($account in $accounts)
+				<td>$!account.libelleTypeCompte</td>
+				#end
+			</tr>
+			<tr>
+				<td class="fixed-column">$i18n.getText("cokpit.frc.jira.kycfile.compte.numeroCompte")</td>
+				#foreach($account in $accounts)
+				<td>$!account.numeroCompte</td>
+				#end
+			</tr>
+			<tr>
+				<td class="fixed-column">$i18n.getText("cokpit.frc.jira.kycfile.compte.dateOuvetureCompte")</td>
+				#foreach($account in $accounts)
+				<td>$!account.dateOuverture</td>
+				#end
+			</tr>
+			#end
+			</tr>
+		</tbody>
+	</table>
+</div>

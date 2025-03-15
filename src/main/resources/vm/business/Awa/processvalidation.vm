@@ -1,0 +1,74 @@
+<div class="section">
+	<div class="section-header">
+		<h2>Processus de validation KYC</h2>
+	</div>
+	<div class="section-content" style="display:block;">
+		<table class="aui">
+			<thead>
+				<tr>
+					<th id="issuekey">Ticket WK</th>
+					<th id="process">Type de Processus</th>
+					<th id="lancement">Date de lancement</th>
+					<th id="validationfinale">Date de validation finale</th>
+					<th id="cc">Conseiller clientèle</th>
+					<th id="validationCC">Date de validation CC</th> 
+					<th id="ra">Responsable Agence</th>
+					<th id="validationRA">Date de validation RA/RM</th>
+					<th id="details">Détails</th>
+				</tr>
+			</thead>
+			<tbody>
+				#foreach($jissue in $jissues)
+				<tr>
+					<td headers="issuekey">$!jissue.issuekey</td>
+					<td headers="process">$!jissue.workflowType</td>
+					<td headers="lancement">$!jissue.created</td>
+					<td headers="validationfinale">$!jissue.lastValidation</td>
+					<td headers="cc">$!jissue.cc</td>
+					<td headers="validationCC">$!jissue.validationCC</td> 
+					<td headers="ra">$!jissue.ra</td>
+					<td headers="validationRA">$!jissue.validationRA</td>
+					<td headers="details"><button class="aui-button" data-aui-trigger aria-controls=$jissue.issueid><span class="aui-icon aui-icon-small aui-iconfont-more"></span></button></td>
+					#parse("/vm/business/details-processvalidation.vm")
+				</tr>
+				#end
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="section"  style="margin-top:20px;">
+	<div class="section-header">
+		<h2>Données Historisées</h2>
+	</div>
+	<div class="section-content" style="display:block;">
+		<table class="aui">
+			<thead>
+				<tr>
+					<th id="issuekey">Ticket WK</th>
+					<th id="process">Type de Processus</th>
+					<th id="validationfinale">Date de validation finale</th>
+					<th id="classificationRisque">Classification Risque</th>
+					<th id="avisRCOFatca">Demande avis RCO FATCA</th>
+					<th id="avisRCOCRS">Demande avis RCO CRS</th> 
+					<th id="flagABC">Flag ABC</th> 
+					<th id="validationCC">Flag PEP</th> 
+				</tr>
+			</thead>
+			<tbody>
+				#foreach($jissue in $jissues)
+				<tr>
+					<td headers="issuekey">$!jissue.issuekey</td>
+					<td headers="process">$!jissue.workflowType</td>
+					<td headers="validationfinale">$!jissue.lastValidation</td>
+					<td headers="classificationRisque">$!jissue.classificationRisque</td>
+					<td headers="avisRCOFatca">$!jissue.avisRCOFatca</td>
+					<td headers="avisRCOCRS">$!jissue.avisRCOCRS</td> 
+					<td headers="flagABC">$!jissue.flagABC</td>
+					<td headers="flagPEP">$!jissue.flagPEP</td> 
+				</tr>
+				#end
+			</tbody>
+		</table>
+	</div>
+</div>

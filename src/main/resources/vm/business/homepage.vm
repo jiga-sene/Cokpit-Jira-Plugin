@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+	    <title>$i18n.getText("cokpit.frc.jira.title.page")</title>
+	    <meta name="decorator" content="atl.general"/>
+	    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+	    $webResourceManager.requireResource("com.tc.labt.sgabs.cokpit:cokpitv4-resources")
+	    $webResourceManager.requireResource("com.atlassian.auiplugin:ajs")
+	    $webResourceManager.requireResource("com.atlassian.auiplugin:aui-forms")
+	    $webResourceManager.requireResource("com.atlassian.auiplugin:aui-toggle")
+	    $webResourceManager.requireResource("com.atlassian.auiplugin:aui-progress-indicator")
+	    $webResourceManager.requireResource("com.atlassian.auiplugin:aui-spinner")
+	    $webResourceManager.requireResource("com.atlassian.auiplugin:aui-table-sortable")
+	    $webResourceManager.requireResource("com.atlassian.auiplugin:aui-dialog2")
+	    $webResourceManager.requireResource("com.atlassian.auiplugin:aui-experimental-iconfont")
+	</head>
+	<body>
+		<div class="head-home">
+			<div class="aui-group"> 
+				<h2 class="title-page">$i18n.getText("cokpit.frc.jira.title.homepage")
+					<form class="aui" method="post" action="/plugins/servlet/cokpitv4/homepage">
+						<select class="select"  id="subsidiary" placeholder="" name="subsidiary" onchange="this.form.submit()">
+							<option #if($subsidiary.equals("")) selected #end value="">$i18n.getText("cokpit.frc.jira.label.chooseSubsidiary")</option>
+	                        #foreach($option in $subsidiaries)
+	                        <option #if($option.equals($subsidiary)) selected #end value="$option">$option</option>
+	                        #end
+						</select>
+					</form>
+				</h2>
+			</div>
+		</div>
+		<div class="informations-control">
+			<table class="aui aui-table" id="controls-table">
+				<thead>
+					<th class="aui-table-column-issue-key">$i18n.getText("cokpit.frc.jira.label.codeclient")</th>
+					<th>$i18n.getText("cokpit.frc.jira.label.nomOuRaisonSociale")</th>
+					<th>$i18n.getText("cokpit.frc.jira.label.typeClient")</th>
+					<th>$i18n.getText("cokpit.frc.jira.label.statutDossier")</th>
+					<th>$i18n.getText("cokpit.frc.jira.label.segmentClient")</th>
+					<th>$i18n.getText("cokpit.frc.jira.label.classificationRisk")</th>
+					<th>$i18n.getText("cokpit.frc.jira.label.avisFatca")</th>
+					<th>$i18n.getText("cokpit.frc.jira.label.flagPEP")</th>
+				</thead>
+			</table>
+		</div>
+	</body>
+</html>

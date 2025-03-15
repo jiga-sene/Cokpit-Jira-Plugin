@@ -1,0 +1,80 @@
+<div class="tabs-pane" id="activites">
+	<ul class="property-list">
+		#if($kycFile.libelleTypeClient.equalsIgnoreCase("PP"))
+		<li id="situationImmo" class="item">
+			<div class="wrap">
+				<strong class="name"><label for="situationImmo-val">$i18n.getText("cokpit.frc.jira.kycfile.activites.situationImmo")</label></strong>
+				<div id="situationImmo-val" class="value">$!kycFile.situationImmo</div>
+			</div>
+		</li>
+		<li id="activiteClient" class="item">
+			<div class="aui-group">
+				<div class="aui-item wrap">
+					<strong class="name"><label for="dateDebutActiviteClient-val">$i18n.getText("cokpit.frc.jira.kycfile.activites.dateDebutActiviteClient")</label></strong>
+					<div id="dateDebutActiviteClient-val" class="value">$!kycFile.dateDebutActiviteClient</div>
+				</div>
+				<div class="aui-item wrap">
+					<strong class="name"><label for="perimetreActiviteClient-val">$i18n.getText("cokpit.frc.jira.kycfile.activites.perimetreActiviteClient")</label></strong>
+					<div id="perimetreActiviteClient-val" class="value">$!kycFile.perimetreActiviteClient</div>
+				</div>
+			</div>
+		</li>
+		<li id="situationPatrimoniale" class="item">
+			<div class="aui-group">
+				<div class="aui-item wrap">
+					<strong class="name"><label for="situationPatrimonialeNature-val">$i18n.getText("cokpit.frc.jira.kycfile.activites.situationPatrimonialeNature")</label></strong>
+					<div id="situationPatrimonialeNature-val" class="value">$!kycFile.situationPatrimonialeNature</div>
+				</div>
+				<div class="aui-item wrap">
+					<strong class="name"><label for="situationPatrimonialeMontant-val">$i18n.getText("cokpit.frc.jira.kycfile.activites.situationPatrimonialeMontant")</label></strong>
+					<div id="situationPatrimonialeMontant-val" class="value">$!kycFile.situationPatrimonialeMontant</div>
+				</div>
+			</div>
+		</li>
+		<li id="montantRevenus" class="item">
+			<div class="wrap">
+				<strong class="name"><label for="montantRevenus-val">$i18n.getText("cokpit.frc.jira.kycfile.activites.montantRevenus")</label></strong>
+				<div id="montantRevenus-val" class="value">$!kycFile.montantRevenus</div>
+			</div>
+		</li>
+		<li id="origineRessources" class="item">
+			<div class="wrap">
+				<strong class="name"><label for="origineRessources-val">$i18n.getText("cokpit.frc.jira.kycfile.activites.origineRessources")</label></strong>
+				<div id="origineRessources-val" class="value">$!kycFile.origineRessources</div>
+			</div>
+		</li>
+		#end
+		#if($kycFile.libelleTypeClient.equalsIgnoreCase("PM"))
+		<li id="appartenanceGroupe" class="item">
+			<div class="wrap">
+				<strong class="name"><label for="appartenanceGroupe-val">$i18n.getText("cokpit.frc.jira.kycfile.activites.appartenanceGroupe")</label></strong>
+				<div id="appartenanceGroupe-val" class="value">$!kycFile.appartenanceGroupe</div>
+			</div>
+		</li>
+		<li id="paysNationaliteGroupe" class="item">
+			<div class="wrap">
+				<strong class="name"><label for="paysNationaliteGroupe-val">$i18n.getText("cokpit.frc.jira.kycfile.activites.paysNationaliteGroupe")</label></strong>
+				<div id="paysNationaliteGroupe-val" class="value">$!kycFile.paysNationaliteGroupe</div>
+			</div>
+		</li>
+		<li id="nomCommercialGroupe" class="item">
+			<div class="wrap">
+				<strong class="name"><label for="nomCommercialGroupe-val">$i18n.getText("cokpit.frc.jira.kycfile.activites.nomCommercialGroupe")</label></strong>
+				<div id="nomCommercialGroupe-val" class="value">$!kycFile.nomCommercialGroupe</div>
+			</div>
+		</li>
+		<li id="chiffreDAffaires" class="item">
+			<div class="wrap">
+				<strong class="name"><label for="chiffreDAffaires-val">$i18n.getText("cokpit.frc.jira.kycfile.activites.chiffreDAffaires")</label></strong>
+				<div id="chiffreDAffaires-val" class="value">$!kycFile.chiffreDAffaires</div>
+			</div>
+		</li>
+		<li id="beneficeNet" class="item">
+			<div class="wrap">
+				<strong class="name"><label for="beneficeNet-val">$i18n.getText("cokpit.frc.jira.kycfile.activites.beneficeNet")</label></strong>
+				<div id="beneficeNet-val" class="value">$!kycFile.beneficeNet</div>
+			</div>
+		</li>
+		#end
+	</ul>
+</div>

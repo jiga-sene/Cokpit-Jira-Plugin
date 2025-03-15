@@ -1,0 +1,136 @@
+<div class="tabs-pane" id="controles">
+	<div class="section">
+		<div class="section-header" onclick="toggleSection(21)">
+			<h2>$i18n.getText("cokpit.frc.jira.kycfile.section.controles")</h2>
+			<span></span>
+		</div>
+		<div class="section-content" id="section21">
+			<ul class="property-list">
+				<li id="resultatControleEmbargo" class="item">
+					<div class="wrap">
+						<strong class="name"><label for="resultatControleEmbargo-val">$i18n.getText("cokpit.frc.jira.kycfile.controles.controles.resultatControleEmbargo")</label></strong>
+						<div id="resultatControleEmbargo-val" class="value">$!kycFile.resultatControleEmbargo</div>
+					</div>
+				</li>
+				<li id="informationsNegativesClient" class="item">
+					<div class="wrap">
+						<strong class="name"><label for="idclient-val">$i18n.getText("cokpit.frc.jira.kycfile.controles.controles.informationsNegativesClient")</label></strong>
+						<div id="informationsNegativesClient-val" class="value">$!kycFile.informationsNegativesClient</div>
+					</div>
+				</li>
+				#if($kycFile.libelleTypeClient.equalsIgnoreCase("PP"))
+				<li id="controlePPE" class="item">
+					<div class="aui-group">
+						<div class="aui-item wrap">
+							<strong class="name"><label for="indicateurClientPPE-val">$i18n.getText("cokpit.frc.jira.kycfile.controles.controles.indicateurClientPPE")</label></strong>
+							<div id="indicateurClientPPE-val" class="value">$!kycFile.indicateurClientPPE</div>
+						</div>
+						<div class="aui-item wrap">
+							<strong class="name"><label for="resultatControlePPE-val">$i18n.getText("cokpit.frc.jira.kycfile.controles.controles.resultatControlePPE")</label></strong>
+							<div id="resultatControlePPE-val" class="value">$!kycFile.resultatControlePPE</div>
+						</div>
+					</div>
+				</li>
+				#end
+				<li id="classificationClientSecurite" class="item">
+					<div class="wrap">
+						<strong class="name"><label for="classificationClientSecurite-val">$i18n.getText("cokpit.frc.jira.kycfile.controles.controles.classificationClientSecurite")</label></strong>
+						<div id="classificationClientSecurite-val" class="value">$!kycFile.classificationRisque</div>
+					</div>
+				</li>
+				<li id="degradationNiveauRisque" class="item">
+					<div class="aui-group">
+						<div class="aui-item wrap">
+							<strong class="name"><label for="degradationRisque-val">$i18n.getText("cokpit.frc.jira.kycfile.controles.controles.degradationRisque")</label></strong>
+							<div id="degradationRisque-val" class="value">$!kycFile.degradationRisque</div>
+						</div>
+						<div class="aui-item wrap">
+							<strong class="name"><label for="raisonDegradation-val">$i18n.getText("cokpit.frc.jira.kycfile.controles.controles.raisonDegradation")</label></strong>
+							<div id="raisonDegradation-val" class="value">$!kycFile.raisonDegradation</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="section">
+		<div class="section-header" onclick="toggleSection(22)">
+			<h2>$i18n.getText("cokpit.frc.jira.kycfile.section.fatcaCRS")</h2>
+			<span></span>
+		</div>
+		<div class="section-content" id="section22" style="display: block;">
+			<ul class="property-list">
+				<li id="statutduFATCA" class="item">
+					<div class="aui-group">
+						<div class="aui-item wrap">
+							<strong class="name"><label for="statutFATCA-val">$i18n.getText("cokpit.frc.jira.kycfile.controles.fatcaCRS.statutFATCA")</label></strong>
+							<div id="statutFATCA-val" class="value">$!kycFile.statutFATCA</div>
+						</div>
+						<div class="aui-item wrap">
+							<strong class="name"><label for="dateStatutFATCA-val">$i18n.getText("cokpit.frc.jira.kycfile.controles.fatcaCRS.dateStatutFATCA")</label></strong>
+							<div id="dateStatutFATCA-val" class="value">$!kycFile.dateStatutFATCA</div>
+						</div>
+					</div>
+				</li>
+				<li id="demandeAvisRCO_FATCA" class="item">
+					<div class="wrap">
+						<strong class="name"><label for="demandeAvisRCO_FATCA-val">$i18n.getText("cokpit.frc.jira.kycfile.controles.fatcaCRS.demandeAvisRCO_FATCA")</label></strong>
+						<div id="demandeAvisRCO_FATCA-val" class="value">$!kycFile.avisRCOFatca</div>
+					</div>
+				</li>
+				<li id="CRS" class="item">
+					<div class="aui-group">
+						<div class="aui-item wrap">
+							<strong class="name"><label for="statutCRS-val">$i18n.getText("cokpit.frc.jira.kycfile.controles.fatcaCRS.statutCRS")</label></strong>
+							<div id="statutCRS-val" class="value">$!kycFile.statutCRS</div>
+						</div>
+						<div class="aui-item wrap">
+							<strong class="name"><label for="demandeAvisRCO_CRS-val">$i18n.getText("cokpit.frc.jira.kycfile.controles.fatcaCRS.demandeAvisRCO_CRS")</label></strong>
+							<div id="demandeAvisRCO_CRS-val" class="value">$!kycFile.avisRCOCRS</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="section">
+		<div class="section-header" onclick="toggleSection(23)">
+			<h2>$i18n.getText("cokpit.frc.jira.kycfile.section.donneesComplementaires")</h2>
+			<span></span>
+		</div>
+		<div class="section-content" id="section23">
+			<ul class="property-list">
+				<li id="flagABC" class="item">
+					<div class="wrap">
+						<strong class="name"><label for="flagABC-val">$i18n.getText("cokpit.frc.jira.kycfile.controles.donneesComplementaires.flagABC")</label></strong>
+						<div id="flagABC-val" class="value">$!kycFile.flagABC</div>
+					</div>
+				</li>
+				<li id="informationNegative" class="item">
+					<div class="aui-group">
+						<div class="aui-item wrap">
+							<strong class="name"><label for="negativeNewsCorruption-val">$i18n.getText("cokpit.frc.jira.kycfile.controles.donneesComplementaires.negativeNewsCorruption")</label></strong>
+							<div id="negativeNewsCorruption-val" class="value">$!kycFile.negativeNewsCorruption</div>
+						</div>
+						<div class="aui-item wrap">
+							<strong class="name"><label for="infoNegative-val">$i18n.getText("cokpit.frc.jira.kycfile.controles.donneesComplementaires.infoNegative")</label></strong>
+							<div id="infoNegative-val" class="value">$!kycFile.infoNegative</div>
+						</div>
+					</div>
+				</li>
+				<li id="sanction" class="item">
+					<div class="aui-group">
+						<div class="aui-item wrap">
+							<strong class="name"><label for="sanctionIncident-val">$i18n.getText("cokpit.frc.jira.kycfile.controles.donneesComplementaires.sanctionIncident")</label></strong>
+							<div id="sanctionIncident-val" class="value">$!kycFile.sanctionIncident</div>
+						</div>
+						<div class="aui-item wrap">
+							<strong class="name"><label for="clientSousEmbargo-val">$i18n.getText("cokpit.frc.jira.kycfile.controles.donneesComplementaires.clientSousEmbargo")</label></strong>
+							<div id="clientSousEmbargo-val" class="value">$!kycFile.clientSousEmbargo</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

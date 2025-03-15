@@ -1,0 +1,38 @@
+<div class="section">	
+	<div class="section-header" onclick="toggleSection(53)">
+		<h2>$i18n.getText("cokpit.frc.jira.kycfile.actionnaires")</h2>
+		<span></span>
+	</div>
+	<div class="section-content" id="section53">
+		<table class="vertical-table">
+			<thead>
+				<tr>
+					<th class="fixed-column">$i18n.getText("cokpit.frc.jira.kycfile.proprietes")</th>
+					#foreach($shareholder in $shareholders)
+					<th>$i18n.getText("cokpit.frc.jira.kycfile.partiesprenantes.actionnaire")$velocityCount</th>
+					#end
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="fixed-column">$i18n.getText("cokpit.frc.jira.kycfile.partiesprenantes.actionnaire.identifiantTiers")</td>
+					#foreach($shareholder in $shareholders)
+					<td>$!shareholder.code</td>
+					#end
+				</tr>
+				<tr>
+					<td class="fixed-column">$i18n.getText("cokpit.frc.jira.kycfile.partiesprenantes.nomTiers")</td>
+					#foreach($shareholder in $shareholders)
+					<td>$!shareholder.nomTiers</td>
+					#end
+				</tr>
+				<tr>
+					<td class="fixed-column">$i18n.getText("cokpit.frc.jira.kycfile.partiesprenantes.prenomTiers")</td>
+					#foreach($shareholder in $shareholders)
+					<td>$!shareholder.prenomTiers</td>
+					#end
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

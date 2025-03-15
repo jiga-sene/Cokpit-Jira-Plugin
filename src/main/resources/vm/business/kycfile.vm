@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+	    <title>$i18n.getText("cokpit.frc.jira.title.page")</title>
+	    <meta name="decorator" content="atl.general"/>
+	    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+	    $webResourceManager.requireResource("com.tc.labt.sgabs.cokpit:cokpit4-kycfile-resources")
+	    $webResourceManager.requireResource("com.atlassian.auiplugin:ajs")
+    	$webResourceManager.requireResource("com.atlassian.auiplugin:aui-page-layout")
+    	$webResourceManager.requireResource("com.atlassian.auiplugin:aui-tabs")
+	    $webResourceManager.requireResource("com.atlassian.auiplugin:aui-experimental-iconfont")
+	    $webResourceManager.requireResource("com.atlassian.auiplugin:aui-table")
+	</head>
+	<body>
+		<header class="aui-page-header">
+    		<div class="aui-page-header-inner">
+    			<div class="aui-group">
+    				<div class="aui-item">
+		    			<div class="aui-page-header-main">
+		    				<ol class="aui-nav aui-nav-breadcrumbs">
+		    					<li><a class="breadcrumb" href="/plugins/servlet/cokpitv4/homepage">$i18n.getText("cokpit.frc.jira.breadcrumb.filekyc")</a></li>
+		    					<li class="aui-nav-selected breadcrumb">$i18n.getText("cokpit.frc.jira.breadcrumb.customer"): #$!kycFile.codeClient</li>
+		    				</ol>
+		    				<h1 class="title">$kycFile.displayName</h1>
+		    			</div>
+	    			</div>
+	    			<div class="aui-item">
+		    			<div class="aui-page-header-actions">
+		    				<ul class="property-list white-color">
+								<li id="statutKYC" class="item">
+									<div class="wrap">
+										<strong class="name"><label class="white-color" for="statutKYC-val">$i18n.getText("cokpit.frc.jira.kycfile.status")</label></strong>
+										<div id="statutKYC-val" class="value"><span class="aui-lozenge aui-lozenge-success white-color">$!kycFile.statutKYC</span></div>
+									</div>
+								</li>		
+								<li id="validiteKYC" class="item">
+									<div class="wrap">
+										<strong class="name"><label class="white-color" for="validiteKYC-val">$i18n.getText("cokpit.frc.jira.kycfile.validiteKYC")</label></strong>
+										<div id="validiteKYC-val" class="value">$!kycFile.validiteKYC</div>
+									</div>
+								</li>	
+								<li id="lastValidation" class="item">
+									<div class="wrap">
+										<strong class="name"><label class="white-color" for="lastValidation-val">Dernière Validation</label></strong>
+										<div id="lastValidation-val" class="value">$!kycFile.lastValidation</div>
+									</div>
+								</li>							
+								<li id="statutControle" class="item">
+									<div class="wrap">
+										<strong class="name"><label class="white-color" for="statutControle-val">Statut Contrôle</label></strong>
+										<div id="statutControle-val" class="value">$!kycFile.statutControle</div>
+									</div>
+								</li>
+							</ul>
+		    			</div>
+		    		</div>
+    			</div>
+    		</div>
+    	</header>
+		<div class="aui-tabs horizontal-tabs" data-aui-responsive data-aui-persist>
+			<ul class="tabs-menu">
+				<li class="menu-item active-tab"><a href="#identite">$i18n.getText("cokpit.frc.jira.kycfile.identite")</a></li>
+				<li class="menu-item"><a href="#controles">$i18n.getText("cokpit.frc.jira.kycfile.controles")</a></li>			
+				#if($kycFile.pep)
+				<li class="menu-item"><a href="#ppe">$i18n.getText("cokpit.frc.jira.kycfile.ppe")</a></li>
+				#end
+				<li class="menu-item"><a href="#comptes">$i18n.getText("cokpit.frc.jira.kycfile.comptes")</a></li>
+				#if($kycFile.libelleTypeClient.equalsIgnoreCase("PM"))
+				<li class="menu-item"><a href="#partiesprenantes">$i18n.getText("cokpit.frc.jira.kycfile.partiesprenantes")</a></li>
+				#end
+			</ul>
+			#parse("/vm/business/identite.vm")
+			#parse("/vm/business/controles.vm")
+			#if($kycFile.pep)
+			#parse("/vm/business/ppe.vm")
+			#end
+			#parse("/vm/business/comptes.vm")
+			#parse("/vm/business/partiesprenantes.vm")
+		</div>
+		#parse("/vm/business/processvalidation.vm")
+	</body>
+</html>
