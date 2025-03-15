@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Atlassian-Build-Date: 2023-07-10T12:12:13+0000
+Atlassian-Plugin-Key: com.tc.labt.sgabs.Cokpitv4
+Bnd-LastModified: 1688991134538
+Build-Jdk: 11.0.12
+Built-By: jga7
+Bundle-Description: This is the com.tc.labt.sgabs:Cokpitv4 plugin for At
+ lassian Refapp.
+Bundle-DocURL: http://www.example.com/
+Bundle-ManifestVersion: 2
+Bundle-Name: Cokpitv4
+Bundle-SymbolicName: com.tc.labt.sgabs.Cokpitv4
+Bundle-Vendor: Example Company
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.tc.labt.sgabs.api;version="1.0.0"
+Import-Package: com.atlassian.plugin.spring.scanner.annotation.export,co
+ m.atlassian.plugin.spring.scanner.annotation.imports,com.atlassian.sal.
+ api,com.tc.labt.sgabs.api,javax.inject
+Spring-Context: *
+Tool: Bnd-3.5.0.201709291849
